@@ -121,13 +121,13 @@ export default function Hero() {
                     className="flex flex-wrap gap-4"
                   >
                     <Link
-                      to="/#services"
+                      to="/services"
                       className="bg-[#e87722] hover:bg-[#cf6a1e] text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#e87722]/40 text-sm tracking-wide"
                     >
                       Our Services
                     </Link>
                     <Link
-                      to="/#contact"
+                      to="/contact"
                       className="bg-white/10 hover:bg-white/20 border border-white/40 text-white font-bold px-8 py-3.5 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 text-sm tracking-wide"
                     >
                       Contact Us

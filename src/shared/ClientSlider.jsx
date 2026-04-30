@@ -23,6 +23,7 @@ export default function ClientSlider() {
 
   // itemWidth and visible count are derived from the real container width
   const [itemWidth, setItemWidth] = useState(160);
+  // eslint-disable-next-line no-unused-vars
   const [visible, setVisible] = useState(5);
   const [offset, setOffset] = useState(0);
   const [animated, setAnimated] = useState(true);

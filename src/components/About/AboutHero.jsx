@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 export default function AboutHero() {
   return (
     <section
-      style={{ backgroundImage: `url("/images/woman-engineer.jpg")` }}
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dtjgj2odu/image/upload/v1777534895/woman-engineer_gyu0th.jpg")`,
+      }}
       className="relative  overflow-hidden min-h-[420px] flex items-center bg-center bg-cover"
     >
-
-      <div className="absolute top-0 left-0  bg-black/50 w-full h-full" >
-
-      </div>
+      <div className="absolute top-0 left-0  bg-black/50 w-full h-full"></div>
       {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-5"

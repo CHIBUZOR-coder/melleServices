@@ -7,7 +7,7 @@ export default function ServicesHero() {
   return (
     <section
       style={{
-        backgroundImage: `url("https://res.cloudinary.com/dtjgj2odu/image/upload/v1777534895/woman-engineer_gyu0th.jpg")`,
+        backgroundImage: `url("/images/woman-engineer_gyu0th.jpg")`,
       }}
       className="relative  overflow-hidden min-h-[420px] flex items-center bg-center bg-cover"
     >

@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 const slides = [
   {
     image:
-      "https://res.cloudinary.com/dtjgj2odu/image/upload/v1777534888/american-lady_wqrhdw.jpg",
+      "/images/american-lady_wqrhdw.jpg",
     tag: "Procurement & Contracting",
     headline: "Delivering Contracts,\nBuilding Trust.",
     sub: "End-to-end procurement solutions tailored for modern industry.",
@@ -28,14 +28,14 @@ const slides = [
   },
   {
     image:
-      "https://res.cloudinary.com/dtjgj2odu/image/upload/v1777534893/engineering_eonpbc.jpg",
+      "/images/engineering_eonpbc.jpg",
     tag: "Oil & Gas Services",
     headline: "Fuelling Industry.\nDriving Growth.",
     sub: "Integrated oil & gas services across upstream and downstream.",
   },
   {
     image:
-      "https://res.cloudinary.com/dtjgj2odu/image/upload/v1777534869/afri_bntzok.png",
+      "/images/afri_bntzok.png",
     tag: "Professional Training",
     headline: "Building Skills.\nShaping Careers.",
     sub: "Industry-focused training programs that create real competence.",

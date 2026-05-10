@@ -61,7 +61,7 @@ const ServiceCard = ({ service, delay }) => {
             })}
           </ul>
 
-          {/* Stats row */}
+          {/* Stats row - Commented out until real values are available
           <div className="grid grid-cols-3 gap-2 pt-4 border-t border-gray-100">
             {service.stats.map((s) => (
               <div key={s.label} className="text-center">
@@ -77,6 +77,7 @@ const ServiceCard = ({ service, delay }) => {
               </div>
             ))}
           </div>
+          */}
         </div>
 
         {/* Footer link */}

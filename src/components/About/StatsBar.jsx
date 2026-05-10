@@ -38,7 +38,7 @@ function StatItem({ stat, delay, inView }) {
   return (
     <motion.div {...anim} className="text-center">
       <p
-        className="text-4xl font-black text-[#e87722]"
+        className="text-4xl sm:text-5xl font-black text-[#e87722]"
         style={{ fontFamily: "'Nunito', sans-serif" }}
       >
         {stat.prefix}
@@ -67,6 +67,7 @@ export default function StatsBar() {
     return () => observer.disconnect();
   }, []);
 
+  return null; /* Commented out until real values are available
   return (
     <section ref={sectionRef} className="bg-[#1e2d5a] py-16 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -76,4 +77,5 @@ export default function StatsBar() {
       </div>
     </section>
   );
+  */
 }

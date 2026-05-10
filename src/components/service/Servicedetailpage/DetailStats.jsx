@@ -20,13 +20,17 @@ function StatItem({ stat, delay }) {
 }
 
 export default function DetailStats({ service }) {
+  return null; /* Commented out until real values are available
+  const validStats = service.stats;
+
   return (
     <section className="bg-[#1e2d5a] py-16 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {service.stats.map((s, i) => (
+        {validStats.map((s, i) => (
           <StatItem key={s.label} stat={s} delay={i * 0.1} />
         ))}
       </div>
     </section>
   );
+  */
 }

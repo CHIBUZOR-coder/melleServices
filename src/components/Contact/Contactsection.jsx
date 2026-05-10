@@ -39,7 +39,7 @@ const infoItems = [
       </svg>
     ),
     label: "Our Address",
-    value: "123 Placeholder Street, Victoria Island, Lagos, Nigeria", // ← replace
+    value: "R14B southernview estate lekki lagos", // ← replace
   },
   {
     icon: (
@@ -299,13 +299,20 @@ export default function ContactSection() {
                 <label className="text-[#1e2d5a] text-xs font-bold uppercase tracking-widest">
                   Subject <span className="text-[#e87722]">*</span>
                 </label>
-                <input
-                  type="text"
+                <select
                   name="subject"
                   required
-                  placeholder="e.g. Procurement Enquiry"
-                  className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#e87722] focus:ring-2 focus:ring-[#e87722]/10 transition-all"
-                />
+                  className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 focus:outline-none focus:border-[#e87722] focus:ring-2 focus:ring-[#e87722]/10 transition-all appearance-none cursor-pointer"
+                >
+                  <option value="" disabled selected>
+                    Select an inquiry type
+                  </option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Service Request">Service Request</option>
+                  <option value="Partnership Inquiry">Partnership Inquiry</option>
+                  <option value="Procurement Enquiry">Procurement Enquiry</option>
+                  <option value="Technical Support">Technical Support</option>
+                </select>
               </div>
 
               {/* Message */}

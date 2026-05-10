@@ -27,7 +27,7 @@ const contactDetails = [
         <circle cx="8" cy="6" r="1.5" />
       </svg>
     ),
-    text: "Lagos, Nigeria",
+    text: "R14B southernview estate lekki lagos",
   },
   {
     icon: (
@@ -60,6 +60,23 @@ const contactDetails = [
       </svg>
     ),
     text: "+234 800 000 0000",
+  },
+  {
+    icon: (
+      <svg
+        className="w-4 h-4"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="8" cy="8" r="7" />
+        <path d="M8 4v4l3 2" />
+      </svg>
+    ),
+    text: "Mon – Fri: 8:00 AM – 6:00 PM",
   },
 ];
 

@@ -82,12 +82,12 @@ export default function HomeStats() {
     return () => observer.disconnect();
   }, []);
 
+  return null; /* Commented out until real values are available
   return (
     <section
       ref={sectionRef}
       className="bg-[#1e2d5a] py-20 px-6 relative overflow-hidden"
     >
-      {/* Subtle pattern */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -97,7 +97,7 @@ export default function HomeStats() {
         }}
       />
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-10">
           {stats.map((s, i) => (
             <StatItem key={s.label} stat={s} delay={i * 0.08} inView={inView} />
           ))}
@@ -105,4 +105,5 @@ export default function HomeStats() {
       </div>
     </section>
   );
+  */
 }

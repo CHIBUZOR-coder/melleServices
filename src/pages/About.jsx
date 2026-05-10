@@ -6,6 +6,8 @@ import SectorsServed from "../components/About/SectorsServed";
 import ServicesTeaser from "../components/About/ServicesTeaser";
 import StatsBar from "../components/About/StatsBar";
 import ClientSlider from "../shared/ClientSlider";
+import CertificatesSlider from "../shared/CertificatesSlider";
+import PartnerCTA from "../shared/PartnerCTA";
 import WhoWeAre from "../components/About/WhoWeAre";
 import WhyChooseUs from "../components/About/WhyChooseUs";
 import Layout from "../shared/Layout";
@@ -20,8 +22,10 @@ export default function About() {
       <MissionVision />
       <CoreValues />
       <WhyChooseUs />
+      <PartnerCTA />
       <SectorsServed />
       <ServicesTeaser />
+      <CertificatesSlider />
       <ClientSlider />
       <AboutCTA />
     </Layout>

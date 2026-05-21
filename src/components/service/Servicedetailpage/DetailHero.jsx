@@ -2,6 +2,8 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ServiceIcon from "../../../shared/ServiceIcon";
+
 function DetailHero({ service }) {
   return (
     <section className="relative min-h-[480px] flex items-end overflow-hidden">
@@ -14,14 +16,15 @@ function DetailHero({ service }) {
       <div className="absolute inset-0 bg-gradient-to-t from-[#1e2d5a]/60 to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 pt-32 w-full">
-        <motion.span
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block bg-[#e87722] text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5"
+          className="inline-flex items-center gap-3 bg-[#e87722] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-5 shadow-lg"
         >
-          {service.icon} {service.title.split(" ")[0]}
-        </motion.span>
+          <ServiceIcon id={service.id} color="white" className="text-lg" animate={true} />
+          <span>{service.title}</span>
+        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

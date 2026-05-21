@@ -4,41 +4,78 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import useFadeIn from "../../hooks/useFadeIn";
 
+import { 
+  LuHandshake, 
+  LuMapPin, 
+  LuCircleDollarSign, 
+  LuAward, 
+  LuWorkflow 
+} from "react-icons/lu";
+
 const pillars = [
   {
-    icon: "🤝",
+    id: "reliability",
     title: "Reliability & Trust",
     desc: "We deliver on our promises, ensuring peace of mind and continuity for your operations.",
   },
   {
-    icon: "📍",
+    id: "expertise",
     title: "Local Expertise",
     desc: "Deep understanding of the Nigerian market, regulatory landscape, and logistics challenges.",
   },
   {
-    icon: "💰",
+    id: "efficiency",
     title: "Cost Efficiency",
     desc: "Strategic sourcing practices result in competitive pricing without compromising on quality.",
   },
   {
-    icon: "✅",
+    id: "quality",
     title: "Commitment to Quality",
     desc: "Strict quality control ensures that all supplied goods and services meet global standards.",
   },
   {
-    icon: "🔧",
+    id: "solutions",
     title: "End-to-End Solutions",
     desc: "A single point of contact for complex procurement and contract needs.",
   },
 ];
 
+function PillarIcon({ id }) {
+  const icons = {
+    reliability: <LuHandshake />,
+    expertise: <LuMapPin />,
+    efficiency: <LuCircleDollarSign />,
+    quality: <LuAward />,
+    solutions: <LuWorkflow />,
+  };
+
+  return (
+    <motion.div
+      animate={{ 
+        y: [0, -4, 0],
+      }}
+      transition={{ 
+        duration: 3, 
+        repeat: Infinity, 
+        ease: "easeInOut" 
+      }}
+      whileHover={{ 
+        scale: 1.2, 
+        rotate: [0, -10, 10, 0],
+        transition: { duration: 0.4 }
+      }}
+      className="text-xl flex-shrink-0 w-12 h-12 bg-[#fdf1e8] text-[#e87722] rounded-xl flex items-center justify-center shadow-sm"
+    >
+      {icons[id]}
+    </motion.div>
+  );
+}
+
 function Pillar({ pillar, delay }) {
   const anim = useFadeIn(delay);
   return (
     <motion.div {...anim} className="flex items-start gap-4">
-      <span className="text-2xl flex-shrink-0 w-10 h-10 bg-[#e87722]/10 rounded-xl flex items-center justify-center">
-        {pillar.icon}
-      </span>
+      <PillarIcon id={pillar.id} />
       <div>
         <h4
           className="text-[#1e2d5a] font-bold text-sm mb-1"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import useFadeIn from "../../hooks/useFadeIn";
 import { services } from "../../data/services";
+import ServiceIcon from "../../shared/ServiceIcon";
 
 const ServiceCard = ({ service, delay }) => {
   const anim = useFadeIn(delay);
@@ -23,9 +24,10 @@ const ServiceCard = ({ service, delay }) => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#1e2d5a]/80 via-[#1e2d5a]/20 to-transparent" />
           {/* Icon pill */}
-          <span className="absolute top-4 left-4 bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full">
-            {service.icon} {service.title.split(" ")[0]}
-          </span>
+          <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm border border-white/20 text-[#1e2d5a] text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2">
+            <ServiceIcon id={service.id} className="text-lg" animate={false} /> 
+            <span>{service.title.split(" ")[0]}</span>
+          </div>
         </div>
 
         {/* Body */}

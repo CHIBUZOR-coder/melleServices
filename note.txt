@@ -1,3 +1,14 @@
 Primary:     #ffffff  (white)
 Secondary:   #e87722  (the M orange)
 Dark Accent: #1e2d5a  (your navy — already in the navbar)
+
+
+   > New Inquiry from Melles Serv
+      >
+      > Name: {{from_name}}
+      > Email: {{from_email}}
+      > Phone: {{phone}}
+      > Subject: {{subject}}
+      >
+      > Message:
+      > {{message}}

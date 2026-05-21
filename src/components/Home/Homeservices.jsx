@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import useFadeIn from "../../hooks/useFadeIn";
 import { services } from "../../data/services";
+import ServiceIcon from "../../shared/ServiceIcon";
 
 function ServiceTile({ service, delay }) {
   const anim = useFadeIn(delay);
@@ -13,7 +14,9 @@ function ServiceTile({ service, delay }) {
         to={service.route}
         className="group flex flex-col bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#e87722]/30 hover:shadow-xl transition-all duration-300 no-underline h-full"
       >
-        <span className="text-3xl mb-4 block">{service.icon}</span>
+        <div className="mb-4">
+          <ServiceIcon id={service.id} className="text-4xl" />
+        </div>
         <h3
           className="text-[#1e2d5a] font-black text-base mb-2 group-hover:text-[#e87722] transition-colors"
           style={{ fontFamily: "'Nunito', sans-serif" }}

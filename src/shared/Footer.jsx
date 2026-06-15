@@ -8,6 +8,7 @@ const quickLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
+  { label: "Portfolio", to: "/portfolio" },
   { label: "Contact", to: "/contact" },
 ];
 

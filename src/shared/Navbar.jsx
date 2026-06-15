@@ -128,6 +128,7 @@ const Navbar = () => {
             {[
               { label: "Services", to: "/services" },
               { label: "About", to: "/about" },
+              { label: "Portfolio", to: "/portfolio" },
               { label: "Contact", to: "/contact" },
             ].map((link, i) => (
               <NavLink
@@ -159,18 +160,18 @@ const Navbar = () => {
             />
           </button>
         </div>
-
-        {/* Mobile Dropdown Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
-            {[
-              { label: "Home", to: "/" },
-              { label: "Services", to: "/services" },
-              { label: "About", to: "/about" },
-              { label: "Contact", to: "/contact" },
-            ].map((link) => (
-              <NavLink
-                key={link.label}
+{/* Mobile Dropdown Menu */}
+{menuOpen && (
+  <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+    {[
+      { label: "Home", to: "/" },
+      { label: "Services", to: "/services" },
+      { label: "About", to: "/about" },
+      { label: "Portfolio", to: "/portfolio" },
+      { label: "Contact", to: "/contact" },
+    ].map((link) => (
+      <NavLink
+        key={link.label}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>

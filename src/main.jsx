@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"; // ✅ RouterProvider imported
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
 import ServicesPage from "./pages/Servicespage.jsx";
 import ServiceDetailPage from "./components/service/Servicedetailpage.jsx";
 import ContactPage from "./pages/Contactpage.jsx";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         element: <About />,
         path: "about",
+      },
+      {
+        element: <Portfolio />,
+        path: "portfolio",
       },
       { element: <ServicesPage />, path: "services" },
       { element: <ServiceDetailPage />, path: "services/:id" },

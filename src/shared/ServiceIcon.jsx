@@ -7,7 +7,9 @@ import {
   LuSignature, 
   LuTruck, 
   LuFuel, 
-  LuFactory 
+  LuFactory,
+  LuPencilRuler,
+  LuClipboardCheck
 } from "react-icons/lu";
 
 export default function ServiceIcon({ id, color, className = "text-4xl", animate = true }) {
@@ -19,6 +21,8 @@ export default function ServiceIcon({ id, color, className = "text-4xl", animate
     logistics: <LuTruck />,
     petroleum: <LuFuel />,
     "oil-and-gas": <LuFactory />,
+    "engineering-consultancy": <LuPencilRuler />,
+    "project-management": <LuClipboardCheck />,
   };
 
   const iconElement = icons[id] || <span>📦</span>;

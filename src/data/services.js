@@ -200,6 +200,58 @@ export const services = [
       { label: 'HSE Compliance Rate', value: '100%' },
       { label: 'Field Operations', value: '50+' }
     ]
+  },
+
+  {
+    id: 'engineering-consultancy',
+    title: 'Engineering & Consultancy',
+    shortDesc: 'Expert technical advisory and engineering solutions for complex infrastructure and energy projects.',
+    icon: '⚙️',
+    route: '/services/engineering-consultancy',
+    heroImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1400',
+    color: '#1e2d5a',
+
+    overview: `Melles Services provides comprehensive engineering design, technical advisory, and consultancy services. We support clients from conceptual design through to project completion, ensuring technical integrity and regulatory compliance.`,
+
+    highlights: [
+      'Conceptual & Front-End Engineering Design (FEED)',
+      'Structural and Civil Engineering services',
+      'Technical Audits and specialized assessments',
+      'Regulatory compliance and safety advisory',
+      'Sustainability and environmental consulting'
+    ],
+
+    stats: [
+      { label: 'Engineering Experts', value: '20+' },
+      { label: 'Designs Completed', value: '40+' },
+      { label: 'Compliance Rate', value: '100%' }
+    ]
+  },
+
+  {
+    id: 'project-management',
+    title: 'Project Management',
+    shortDesc: 'End-to-end project oversight ensuring delivery on time, within budget, and to the highest quality.',
+    icon: '📊',
+    route: '/services/project-management',
+    heroImage: 'https://images.unsplash.com/photo-1454165833762-02ac4f40e6e8?w=1400',
+    color: '#e87722',
+
+    overview: `Our project management team brings discipline and precision to every assignment. We handle everything from resource allocation and risk management to stakeholder communication and final delivery, ensuring your project goals are met efficiently.`,
+
+    highlights: [
+      'Full Lifecycle Project Management',
+      'Risk Assessment and mitigation planning',
+      'Schedule and rigorous budget control',
+      'Quality Assurance and Control (QA/QC)',
+      'Strategic stakeholder management'
+    ],
+
+    stats: [
+      { label: 'Projects Delivered', value: '80+' },
+      { label: 'On-Time Delivery', value: '98%' },
+      { label: 'Cost Savings', value: '15%' }
+    ]
   }
 ]
 

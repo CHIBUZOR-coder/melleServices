@@ -21,6 +21,11 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+// Initialize EmailJS
+if (EMAILJS_PUBLIC_KEY) {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
 // ── Contact info ─────────────────────────────────────────────────────────────
 const infoItems = [
   {
@@ -186,16 +191,24 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    console.log("Attempting to send EmailJS form...", {
+      serviceId: EMAILJS_SERVICE_ID,
+      templateId: EMAILJS_TEMPLATE_ID,
+      publicKey: EMAILJS_PUBLIC_KEY,
+    });
+
     try {
-      await emailjs.sendForm(
+      const result = await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
         EMAILJS_PUBLIC_KEY,
       );
+      console.log("EmailJS Success:", result.text);
       setStatus("success");
       formRef.current.reset();
-    } catch {
+    } catch (err) {
+      console.error("EmailJS Error details:", err);
       setStatus("error");
     }
   };
@@ -302,9 +315,10 @@ export default function ContactSection() {
                 <select
                   name="subject"
                   required
+                  defaultValue=""
                   className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 focus:outline-none focus:border-[#e87722] focus:ring-2 focus:ring-[#e87722]/10 transition-all appearance-none cursor-pointer"
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select an inquiry type
                   </option>
                   <option value="General Inquiry">General Inquiry</option>

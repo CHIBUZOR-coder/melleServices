@@ -1,32 +1,14 @@
 // src/components/Home/HomeTeam.jsx
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import useFadeIn from "../../hooks/useFadeIn";
 
 const team = [
   {
-    name: "Engr. Olumide Balogun",
-    role: "Managing Director / Founder",
-    bio: "With over 15 years of industry experience, Engr. Balogun leads Melles Serv with a vision for operational excellence and localized technical expertise.",
-    expertise: ["Project Management", "Energy Sector Strategy"],
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
-  },
-  {
     name: "Barr. Amara Nwosu",
     role: "Head of Procurement & Legal",
     bio: "A specialist in procurement law and contract administration, Amara ensures all operations meet strict regulatory compliance and global standards.",
     expertise: ["Procurement Law", "Contract Negotiation"],
-    image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=500&fit=crop",
-  },
-  {
-    name: "Tunde Adeyemi",
-    role: "Technical Writing & Compliance Lead",
-    bio: "Tunde bridges the gap between technical requirements and execution through meticulous documentation and industry-specific knowledge.",
-    expertise: ["Technical Writing", "Quality Assurance"],
-    image:
-      "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&h=500&fit=crop",
+    image: "/images/ceo.jpg",
   },
 ];
 
@@ -35,7 +17,7 @@ export default function HomeTeam() {
   const titleAnim = useFadeIn(0.1);
   const descAnim = useFadeIn(0.2);
 
-  // ✅ One hook call per member, all at the top level
+  // Animation hooks for potential future members
   const memberAnim0 = useFadeIn(0.3);
   const memberAnim1 = useFadeIn(0.4);
   const memberAnim2 = useFadeIn(0.5);
@@ -62,23 +44,23 @@ export default function HomeTeam() {
             {...descAnim}
             className="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed"
           >
-            Meet the Nigerian professionals driving excellence through deep
+            Meet our leading professional driving excellence through deep
             industry knowledge, legal expertise, and technical precision.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 ${team.length > 1 ? 'md:grid-cols-2 lg:grid-cols-3' : 'max-w-[360px] mx-auto'} gap-8`}>
           {team.map((member, i) => (
             <motion.div
               key={member.name}
-              {...memberAnims[i]} // ✅ Safe — just reading a pre-computed value
+              {...memberAnims[i]}
               className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 group"
             >
-              <div className="relative h-72 overflow-hidden">
+              <div className="relative h-[400px] overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e2d5a]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
               </div>
